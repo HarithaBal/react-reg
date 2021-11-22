@@ -9,7 +9,7 @@ pipeline {
         }
        stage ("sonarQube analysis"){
 	    steps {
-		withSonarQubeEnv('sonar'){
+		withSonarQubeEnv('Jenkins-Sonar-Integration'){
 			sh "npm install sonar-scanner"
 			sh "npm run sonar"
 			}
